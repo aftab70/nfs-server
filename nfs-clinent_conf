@@ -1,0 +1,5 @@
+sudo apt install nfs-common -y
+sudo mkdir -p /mnt/nfs-share
+echo "192.168.0.1:/mnt/nfs-share /mnt/YOUR_DIRECTORY_TO_MOUNT   nfs auto,noatime,nolock,bg,nfsvers=4,intr,tcp,actimeo=1800 0 0" >> /etc/fstab
+mount -a
+df -h
